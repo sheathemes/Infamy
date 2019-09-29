@@ -71,27 +71,26 @@ CREDITS
  
 <!--Custom Options-->
 <meta name="color:background" content="#fefefe" />
-<meta name="color:accent" content="#b9d7d9" />
+<meta name="color:accent" content="#84fab0" />
 <meta name="color:accent 2" content="#8fd3f4" />
 <meta name="color:accented text" content="#ffffff" />
 <meta name="color:gradient one" content="#84fab0" />
-<meta name="color:gradient two" content="#8fd3f4" />
+<meta name="color:gradient two" content="#84fab0" />
 <meta name="color:Text" content="#888888" />    
-<meta name="color:bold" content="#bca297"/>
+<meta name="color:bold" content="#84fab0"/>
 <meta name="color:italic" content="#000000"/>
 <meta name="color:underline" content="#000000"/>
 <meta name="color:Links" content="#000000" />
-<meta name="color:Link Hover" content="#b9d7d9" />
+<meta name="color:Link Hover" content="#84fab0" />
 <meta name="color:text selection" content="#000000" />
-<meta name="color:text selection background" content="#b9d7d9" />
-<meta name="color:Blockquote" content="#b9d7d9" />
-<meta name="color:Scrollbar" content="#b9d7d9" />
+<meta name="color:text selection background" content="#84fab0" />
+<meta name="color:Blockquote" content="#84fab0" />
 <meta name="color:Posts" content="#ffffff" />
 <meta name="color:Post Title" content="#000000" />
 <meta name="color:Post Borders" content="#f6f6f6" />
-<meta name="color:pagination" content="#888888" />
+<meta name="color:pagination" content="#000000" />
 <meta name="color:permalink" content="#000000" />
-<meta name="color:permalink hover" content="#b9d7d9" />
+<meta name="color:permalink hover" content="#84fab0" />
  
 <meta name="select:Background Attachment" content="fixed" title="fixed">
 <meta name="select:Background Attachment" content="scroll" title="scroll">
