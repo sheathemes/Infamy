@@ -168,6 +168,7 @@ CREDITS
 <meta name="if:inverted tumblr controls" content="1" />
 <meta name="if:Small Cursor" content="0" />
 <meta name="if:Custom Text Selection" content="0"/>
+<meta name="if:content header" content="1"/>
 <meta name="if:Faded Images" content="0"/>
 <meta name="if:Grayscale Images" content="0"/>
 <meta name="if:Show Captions" content="1"/>
@@ -1349,7 +1350,7 @@ iframe.tumblr_audio_player {
 
 <section id="content"> <!-----------POST WRAPPER----------->
 
-{block:IndexPage} 
+{block:IndexPage}{block:ifcontentheader} 
 <header id="header"> <!-----------CONTENT HEADER-----------> 
     <section id="header-color"></section>
     <section id="header-content">
@@ -1357,7 +1358,7 @@ iframe.tumblr_audio_player {
         <section id="header-desc">{text:header description}</section>
     </section>
 </header> <!-----------CONTENT HEADER----------->
-{/block:IndexPage} 
+{/block:ifcontentheader}{/block:IndexPage} 
 
 {block:Posts}
 <article class="posts"> <!-----------POSTS----------->
