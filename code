@@ -38,6 +38,8 @@ CREDITS
 > Audio player fix: https://shudesigns.tumblr.com/post/158812662057/tutorial-change-the-color-of-tumblrs-new-audio
 
 > Inline images resizing script: https://gukthemes.com/post/169692012691/inline-images-resizing-script
+
+> NPF Photoset Fix: https://annalogs.tumblr.com/photosets
  
 !-->
  
@@ -606,7 +608,7 @@ a:hover{cursor:url("https://i.imgur.com/IepP2.jpg"), auto !important;}
  
 /*----------TEXT/CAPTION CONTAINER----------*/
 
-.photo, .video {
+.photo, .video, .photo-slideshow {
     padding: {select:Post Padding}px;
 }
  
@@ -1389,6 +1391,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {/block:IndexPage} 
  
 {block:Text}
+<div class="text">
 {block:Title}<div class="title">{Title}</div>{/block:Title}
 <div class="caption">{block:NotReblog} <figcaption> {Body} </figcaption> {/block:NotReblog} {block:RebloggedFrom} <div class="reblog-list">
  
@@ -1399,6 +1402,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {block:IsDeactivated} <span class="inactive {block:isNotOriginalEntry} sub-reblog{/block:isNotOriginalEntry}"> <img src="{PortraitURL-64}"> </span> {/block:IsDeactivated} {block:IsActive} <a target="_blank" href="{Permalink}" class="user"> {Username} </a> {/block:IsActive}
  
 {block:IsDeactivated} <span class="inactive deactivated">{Username} </span> {/block:IsDeactivated} </div> <div class="reblog-content"> {Body} </div> </div> {/block:Reblogs} </div> {/block:RebloggedFrom} </div>
+</div>
 {/block:Text}
  
 {block:Photo}
@@ -1441,9 +1445,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {/block:Photo}
  
 {block:Photoset}
-<div class="photo">
 <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
-</div>
 {block:IfShowCaptions}
 {block:Caption}
 <div class="caption"> {block:NotReblog} <figcaption> {Caption} </figcaption> {/block:NotReblog} {block:RebloggedFrom}
@@ -1734,9 +1736,19 @@ Posted {ShortMonth} {DayOfMonthWithZero}, {Year} @ {12Hour} {AmPm}
 <!-----------Tooltips Script----------->
 <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
 <!-----------Tooltips Script----------->
+
+<!-----------NPF photosets script by annasthms @ tumblr----------->
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
+<!-----------NPF photosets script by annasthms @ tumblr----------->
  
 <script>
 $(document).ready(function(){
+    //NPF photosets script by annasthms
+    undoPhotoset({
+        'posts': '.text', 
+        'text class': 'caption',
+        'photoset class': 'photoset'
+    },true); 
     //pxu photosets by @ shythemes & bychloethemes
     $('.photo-slideshow').pxuPhotoset({
         lightbox: true,
